@@ -16,7 +16,7 @@ export class FeedService {
     return this.http.get<Post[]>(url, {observe: 'response'}).pipe(
       map((response:HttpResponse<Post[]>) =>({
         posts: response.body as Post[] ,
-        totalCount: +response.headers.get('X-Total-Count')!
+        totalCount: 40
       }))
     )
   }

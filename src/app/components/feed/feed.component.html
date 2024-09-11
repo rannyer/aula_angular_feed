@@ -1,7 +1,11 @@
-<div class="feed-container">
-    <app-post ></app-post>
-  
+<div class="feed-container" (scroll)="onScroll($event)">
+
+    <h1>{{counter}}</h1>
+    <app-post *ngFor="let post of posts" [post]="post" ></app-post>
+
     <div *ngIf="isLoading" class="loading-spinner">
       <span>Carregando...</span>
     </div>
+
+
 </div>
