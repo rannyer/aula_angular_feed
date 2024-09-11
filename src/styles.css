@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h4, h5 {
+    margin: 0;
+  }
+  
+  button {
+    font-family: inherit;
+    font-size: 14px;
+  }
+  
+  /* Make the feed responsive */
+  @media (max-width: 768px) {
+    .feed-container {
+      padding: 10px;
+    }
+  
+    .post-card {
+      padding: 12px;
+    }
+  }
+  

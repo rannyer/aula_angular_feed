@@ -1,0 +1,97 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "user": "Merlin",
+        "content": "This is the first post!",
+        "likes": 20,
+        "comments": [
+          { "user": "Arthur", "text": "Great post!" },
+          { "user": "Lancelot", "text": "Thanks for sharing!" }
+        ]
+      },
+      {
+        "id": 2,
+        "user": "Drizzt",
+        "content": "Hello, world!",
+        "likes": 15,
+        "comments": [
+          { "user": "Bruenor", "text": "Hi Drizzt!" }
+        ]
+      },
+      {
+        "id": 3,
+        "user": "Raistlin",
+        "content": "Magic is power.",
+        "likes": 25,
+        "comments": [
+          { "user": "Caramon", "text": "Be careful, brother." },
+          { "user": "Tasslehoff", "text": "Amazing!" }
+        ]
+      },
+      {
+        "id": 4,
+        "user": "Elminster",
+        "content": "Knowledge is key.",
+        "likes": 30,
+        "comments": [
+          { "user": "Mordenkainen", "text": "Indeed." }
+        ]
+      },
+      {
+        "id": 5,
+        "user": "Volo",
+        "content": "Adventures await!",
+        "likes": 18,
+        "comments": [
+          { "user": "Durnan", "text": "Good luck!" }
+        ]
+      },
+      {
+        "id": 6,
+        "user": "Jarlaxle",
+        "content": "Always have a plan.",
+        "likes": 22,
+        "comments": [
+          { "user": "Entreri", "text": "Wise words." }
+        ]
+      },
+      {
+        "id": 7,
+        "user": "Kitiara",
+        "content": "Strength and honor.",
+        "likes": 28,
+        "comments": [
+          { "user": "Tanis", "text": "Well said." }
+        ]
+      },
+      {
+        "id": 8,
+        "user": "Minsc",
+        "content": "Go for the eyes!",
+        "likes": 35,
+        "comments": [
+          { "user": "Boo", "text": "Squeak!" }
+        ]
+      },
+      {
+        "id": 9,
+        "user": "Tasha",
+        "content": "Laughter is magic.",
+        "likes": 40,
+        "comments": [
+          { "user": "Zagig", "text": "Absolutely!" }
+        ]
+      },
+      {
+        "id": 10,
+        "user": "Vecna",
+        "content": "Power is eternal.",
+        "likes": 50,
+        "comments": [
+          { "user": "Kas", "text": "Forever." }
+        ]
+      }
+    ]
+  }
+  
