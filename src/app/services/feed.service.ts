@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs';
 import { Post } from '../models/post';
 
 @Injectable({
@@ -10,15 +11,23 @@ export class FeedService {
   private apiUrl = 'http://localhost:3000/posts';
   constructor(private http: HttpClient) { }
 
-  getPosts():Observable<Post[]>{
-
+  getPosts(page:number, limit:number):Observable<{post:Post[], totalCount:number}>{
+    const url = `${this.apiUrl}?_page=${page}&_limit=${limit}`
+    return this.http.get<Post[]>(url, {observe: 'response'}).pipe(
+      map((response:HttpResponse<Post[]>) =>({
+        post: response.body as Post[] ,
+        totalCount: +response.headers.get('X-Total-Count')!
+      }))
+    )
   }
 
-  likePost():Observable<Post>{
-
+  likePost(post:Post):Observable<Post>{
+    const updatedPost = {likes: post.likes + 1};
+    return this.http.patch<Post>(`${this.apiUrl}/${post.id}`, updatedPost)
   }
 
-  dislikePost():Observable<Post>{
-    
+  dislikePost(post:Post):Observable<Post>{
+    const updatedPost = {likes: post.likes - 1};
+    return this.http.patch<Post>(`${this.apiUrl}/${post.id}`, updatedPost)
   }
 }

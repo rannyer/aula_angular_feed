@@ -1,24 +1,24 @@
 <div class="post-card">
     <div class="post-header">
       <img src="https://i.pravatar.cc/40" alt="" class="post-avatar">
-      <h4>Maria Bela</h4>
+      <h4>{{post.user}}</h4>
     </div>
   
     <div class="post-content">
-      <p>Primeiro post na rede</p>
+      <p>{{post.content}}/p>
     </div>
   
     <div class="post-actions">
       <button (click)="likePost()" class="btn-like">Curtir</button>
       <button (click)="dislikePost()" class="btn-dislike">Descurtir</button>
-      <span class="post-likes">10 Likes</span>
+      <span class="post-likes">{{post.likes}} Likes</span>
     </div>
   
     <div class="post-comments">
       <h5>Comentários</h5>
       <ul>
         <li *ngFor="let comment of post.comments">
-          <strong>Joao Joao:</strong> Legal!
+          <strong>{{comment.user}}:</strong> {{comment.text}}!
         </li>
       </ul>
     </div>

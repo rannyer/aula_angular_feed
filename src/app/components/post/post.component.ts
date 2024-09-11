@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Post } from '../../models/post';
 
 @Component({
   selector: 'app-post',
@@ -9,7 +10,9 @@ import { Component } from '@angular/core';
   styleUrl: './post.component.css'
 })
 export class PostComponent {
-  post = {comments:""}
+  @Input() post!:Post;
+
+  
   dislikePost(){
 
   }
