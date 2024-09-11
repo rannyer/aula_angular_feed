@@ -11,11 +11,11 @@ export class FeedService {
   private apiUrl = 'http://localhost:3000/posts';
   constructor(private http: HttpClient) { }
 
-  getPosts(page:number, limit:number):Observable<{post:Post[], totalCount:number}>{
+  getPosts(page:number, limit:number):Observable<{posts:Post[], totalCount:number}>{
     const url = `${this.apiUrl}?_page=${page}&_limit=${limit}`
     return this.http.get<Post[]>(url, {observe: 'response'}).pipe(
       map((response:HttpResponse<Post[]>) =>({
-        post: response.body as Post[] ,
+        posts: response.body as Post[] ,
         totalCount: +response.headers.get('X-Total-Count')!
       }))
     )
